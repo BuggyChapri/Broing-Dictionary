@@ -22,4 +22,4 @@ def index():
     return render_template("index.html", response_data = response_data)
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run()
