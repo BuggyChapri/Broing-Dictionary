@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <h1>Welcome to the Boring Dict</h1>
+    <form action="/" method="post">
+        <label for="word">Search for words:</label>
+        <input type="text" autocomplete="off" autofocus name="word_input" id="word" required />
+        <button type="submit">Search</button>
+    </form>
+    <div>
+        {% if response_data %}
+            {% for data in response_data %}
+                <h1>{{ data.word }}</h1>
+                {% if data.phonetic %}
+                    <p>Phonetic: {{ data.phonetic }}</p>
+                {% endif %}
+                {% if data.origin %}
+                    <p>Origin: {{ data.origin }}</p>
+                {% endif %}
+                {% if data.meanings %}
+                    {% for meaning in data.meanings %}
+                        <p>Definition: {{ meaning.definitions[0].definition }}</p>
+                        {% if meaning.definitions[0].example %}
+                            <p>Example: {{ meaning.definitions[0].example }}</p>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <h1>No results found for your query.</h1>
+            <p>Try searching for another word.</p>
+        {% endif %}
+    </div>        
+{% endblock %}
