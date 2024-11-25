@@ -15,6 +15,7 @@ If you want to run it on local Machine then, The things you need before installi
 
 * You need python 3
 * And you need flask 
+* Api link - https://dictionaryapi.dev/
 * Oh, and don't forget a browser 
 
 ## Deployment
@@ -37,4 +38,3 @@ idk 😶 why I am telling you that 😑 but yaa it is what it is(in case)
 * Anyone want to suggest anything highly appreciated 
 
 ## enjoy
- https://dictionaryapi.dev/
