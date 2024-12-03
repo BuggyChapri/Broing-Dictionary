@@ -1,4 +1,4 @@
-# Boring Dictionary 📓🔖
+# Boring Dictionary 📓🔖  
 
 It's a boring (not really) dictionary app where you can search 🔎. about words 
 
